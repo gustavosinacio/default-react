@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jest": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -24,6 +25,13 @@ module.exports = {
     "plugins": [
         "react", 'prettier', 'react-hooks'
     ],
+    settings: {
+        'import/resolver': {
+            'babel-plugin-root-import': {
+                rootPathSuffix: 'src',
+            },
+        },
+    },      
     rules: {
         "prettier/prettier": "error",
         "react/jsx-filename-extension": [
