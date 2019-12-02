@@ -5,12 +5,15 @@ module.exports = {
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb",
+        'prettier',
+        'prettier/react'
     ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
+    parser: 'babel-eslint',
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -19,8 +22,18 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react", 'prettier', 'react-hooks'
     ],
-    "rules": {
-    }
+    rules: {
+        "prettier/prettier": "error",
+        "react/jsx-filename-extension": [
+            'warn', 
+            { extensions: ['.jsx', '.js'] }
+        ],
+        'import/prefer-default-export': 'off',
+        'no-param-reassign': 'off',
+        'no-console': ['error', { allow: ['tron'] }], // this is for when using reactotron
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps':'warn'
+    },
 };
