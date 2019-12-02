@@ -11,7 +11,7 @@ module.exports = {
 
     ]),
     "post-commit": postCommit([
-      "echo '\n--------------------------------------------'",
+      "echo '\\e[1m\\033[31m--------------------------------------------\\e[0m'",
     ]),
     "pre-push": "echo \"\n---  \\e[1m\\033[34mPre-push =>\\e[0m executes: \\e[4m\\033[33mempty\\e[0m ---\n\""
   }
