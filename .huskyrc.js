@@ -1,7 +1,6 @@
 const preCommit = arr => arr.join(' && ')
 const postCommit = arr => arr.join(' && ')
 const prePush = arr => arr.join(' && ')
-const postPush = arr => arr.join(' && ')
 
 module.exports = {
   "hooks": {
@@ -18,8 +17,5 @@ module.exports = {
       "echo '\\e[1m\\033[34m--------------------------------------------\\e[0m'",
       "echo \"---  \\e[1m\\033[34mPre-push =>\\e[0m executes: \\e[4m\\033[33mempty\\e[0m ---\n\""
     ]),
-    "update": postPush([
-      "echo '\n\\e[1m\\033[34m--------------------------------------------\\e[0m'",
-    ])
   }
 }
