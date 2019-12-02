@@ -20,7 +20,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"\n---  \\e[1m\\033[32mPre-commit:\\e[0m executes: \\e[4m\\033[33mlint staged\\e[0m ---\n\" && lint-staged",
+      "pre-commit": "echo \"\n---  \\e[1m\\033[32mPre-commit=>\\e[0m executes: \\e[4m\\033[33mlint staged\\e[0m ---\n\" && lint-staged",
       "pre-push": "echo \"\n---  \\e[1m\\033[32mPre-push:\\e[0m executes \\e[4m\\033[33mempty\\e[0m ---\n\""
     }
   },
